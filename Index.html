@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Gwella Mentoring</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+body {
+margin: 0;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+background: #f5fafb;
+color: #1f2933;
+line-height: 1.6;
+}
+
+header {
+text-align: center;
+padding: 40px 20px 20px;
+}
+
+header img.logo {
+max-width: 220px;
+height: auto;
+margin-bottom: 20px;
+}
+
+main {
+max-width: 900px;
+margin: 0 auto;
+padding: 0 20px 40px;
+}
+
+.intro {
+text-align: center;
+margin-bottom: 40px;
+}
+
+.intro h1 {
+font-size: 2.1rem;
+letter-spacing: 0.12em;
+text-transform: uppercase;
+margin-bottom: 10px;
+}
+
+.intro p.tagline {
+font-size: 1.1rem;
+margin: 0;
+}
+
+.highlight {
+color: #3a8b96;
+font-weight: 600;
+}
+
+.about {
+display: flex;
+flex-wrap: wrap;
+gap: 30px;
+align-items: center;
+margin-bottom: 40px;
+}
+
+.about img.me {
+max-width: 280px;
+border-radius: 8px;
+width: 100%;
+height: auto;
+}
+
+.about-text {
+flex: 1;
+min-width: 260px;
+}
+
+h2 {
+font-size: 1.6rem;
+margin-bottom: 10px;
+color: #253340;
+}
+
+.contact-box {
+background: #ffffff;
+border-radius: 10px;
+padding: 20px 24px;
+box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+margin-bottom: 20px;
+}
+
+.contact-box ul {
+list-style: none;
+padding: 0;
+margin: 0;
+}
+
+.contact-box li {
+margin-bottom: 6px;
+}
+
+.contact-box a {
+color: #3a8b96;
+text-decoration: none;
+font-weight: 600;
+}
+
+.contact-box a:hover {
+text-decoration: underline;
+}
+
+footer {
+text-align: center;
+font-size: 0.85rem;
+padding: 20px;
+color: #7a8a9a;
+}
+
+@media (max-width: 700px) {
+header {
+padding-top: 28px;
+}
+}
+</style>
+</head>
+<body>
+
+<header>
+<!-- Gwella logo -->
+<img src="gwella-logo.jpg" alt="Gwella Mentoring logo" class="logo" />
+</header>
+
+<main>
+<section class="intro">
+<h1>Gwella Mentoring</h1>
+<p class="tagline">
+<strong>Gwella</strong> is Cornish for
+<span class="highlight">“better”</span> or
+<span class="highlight">“best”</span>.
+</p>
+<p>
+Gwella Mentoring is about helping people move towards their “better” –
+clearer direction, stronger confidence and practical next steps.
+</p>
+</section>
+
+<section class="about">
+<!-- Your photo -->
+<img src="mentor-photo.jpg"
+alt="Mentor at the helm of a sailing boat"
+class="me" />
+
+<div class="about-text">
+<h2>About Gwella Mentoring</h2>
+<p>
+Mentoring offers a calm, supportive space to talk things through,
+gain perspective and plan realistic actions. Whether it is school,
+work, life transitions or feeling stuck, you don’t have to navigate
+it alone.
+</p>
+<p>
+Sessions are friendly, down-to-earth and focused on small, manageable
+changes that add up over time.
+</p>
+</div>
+</section>
+
+<section>
+<h2>Contact</h2>
+<div class="contact-box">
+<ul>
+<li>
+📞 Phone:
+<a href="tel:07761946529">07761 946529</a>
+</li>
+<li>
+📧 Email:
+<a href="mailto:gwellamentor@gmail.com">gwellamentor@gmail.com</a>
+</li>
+</ul>
+<p style="margin-top: 10px;">
+Get in touch to ask a question or arrange an informal, no-obligation chat.
+</p>
+</div>
+</section>
+</main>
+
+<footer>
+© <span id="year"></span> Gwella Mentoring
+</footer>
+
+<script>
+// Automatically show the current year in the footer
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
