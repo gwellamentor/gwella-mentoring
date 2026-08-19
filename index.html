@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<title>Gwella Mentoring</title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta
   name="description"
   content="Gwella Mentoring provides experienced one-to-one mentoring for young people, helping build confidence, motivation, direction and practical next steps."
-/>
+>
+<title>Gwella Mentoring</title>
 
 <style>
 * {
@@ -27,70 +26,59 @@ body {
   line-height: 1.65;
 }
 
+main {
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 0 20px 50px;
+}
+
+/* HEADER AND LOGO */
+
 header {
   text-align: center;
-  padding: 24px 16px 16px;
+  padding: 30px 20px 20px;
 }
 
 header img.logo {
-  width: min(88vw, 520px);
-  height: auto;
   display: block;
-  margin: 0 auto 14px;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
   border-radius: 18px;
   border: 3px solid #3a8b96;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.14);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
 }
 
 .tagline-banner {
-  margin: 8px 0 0;
-  font-size: 1rem;
-  font-weight: 600;
+  margin: 12px auto 0;
+  font-size: 1.05rem;
+  font-weight: 650;
   color: #3a8b96;
   letter-spacing: 0.02em;
 }
 
-main {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 20px 46px;
-}
+/* INTRO */
 
-section {
-  margin-bottom: 46px;
-}
-
-.hero {
+.intro {
   text-align: center;
   background: #ffffff;
   border-radius: 18px;
-  padding: 34px 28px;
-  margin-top: 8px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  padding: 35px 45px;
+  margin: 10px 0 45px;
+  box-shadow: 0 5px 16px rgba(0,0,0,0.06);
 }
 
-.hero h1 {
-  font-size: clamp(1.8rem, 4vw, 2.2rem);
-  margin: 0 0 10px;
+.intro h1 {
+  font-size: 2rem;
+  margin: 0 0 18px;
   color: #253340;
 }
 
-.hero .meaning {
-  font-size: 1rem;
-  margin-bottom: 22px;
-}
-
-.hero h2 {
-  font-size: clamp(1.4rem, 4vw, 1.75rem);
-  color: #3a8b96;
-  margin: 24px 0 12px;
-  line-height: 1.3;
-}
-
-.hero p {
-  max-width: 760px;
-  margin-left: auto;
-  margin-right: auto;
+.intro .meaning {
+  font-size: 1.05rem;
+  margin-bottom: 25px;
 }
 
 .highlight {
@@ -98,90 +86,91 @@ section {
   font-weight: 700;
 }
 
-.button-row {
+.intro-lead {
+  max-width: 760px;
+  margin: 0 auto 25px;
+}
+
+.intro h2 {
+  color: #3a8b96;
+  font-size: 1.65rem;
+  line-height: 1.3;
+  margin: 28px auto 18px;
+}
+
+.intro-description {
+  max-width: 780px;
+  margin: 0 auto 25px;
+}
+
+.audience-buttons {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 14px;
-  margin-top: 24px;
+  flex-wrap: wrap;
+  margin-top: 28px;
 }
 
-.button {
+.audience-buttons a {
   display: inline-block;
-  padding: 13px 22px;
-  border-radius: 999px;
+  padding: 12px 22px;
+  border-radius: 30px;
   text-decoration: none;
   font-weight: 700;
-  min-height: 48px;
-  transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.button-primary {
-  background: #3a8b96;
-  color: #ffffff;
-}
-
-.button-secondary {
-  background: #ffffff;
-  color: #3a8b96;
   border: 2px solid #3a8b96;
 }
 
-.button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 5px 12px rgba(0,0,0,0.10);
+.parent-button {
+  background: #3a8b96;
+  color: white;
 }
 
-.cta-strip {
-  text-align: center;
+.school-button {
+  background: white;
+  color: #3a8b96;
+}
+
+/* STUCK SECTION */
+
+.stuck-box {
   background: #eaf5f6;
-  border-radius: 14px;
-  padding: 22px 24px;
-  margin-top: 20px;
-}
-
-.cta-strip strong {
-  color: #253340;
-}
-
-.cta-strip p {
-  margin: 0 0 14px;
-}
-
-.problem-box {
-  background: #eaf5f6;
-  border-left: 5px solid #3a8b96;
-  padding: 26px 28px;
+  border-left: 4px solid #3a8b96;
   border-radius: 12px;
+  padding: 25px 30px;
+  margin-bottom: 55px;
 }
 
-.problem-box h2 {
+.stuck-box h2 {
   margin-top: 0;
 }
 
+/* ABOUT */
+
 .about {
   display: flex;
-  flex-wrap: wrap;
-  gap: 32px;
   align-items: center;
+  gap: 40px;
+  margin-bottom: 55px;
 }
 
 .mentor-photo-wrap {
   text-align: center;
-  flex: 0 1 300px;
+  flex: 0 0 300px;
 }
 
 .about img.me {
-  max-width: 280px;
-  border-radius: 18px;
+  display: block;
   width: 100%;
+  max-width: 285px;
   height: auto;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  margin: 0 auto;
+  border-radius: 18px;
   border: 3px solid #3a8b96;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
 }
 
 .mentor-label {
-  margin-top: 8px;
+  margin-top: 10px;
   font-size: 0.9rem;
   color: #556b78;
   font-weight: 500;
@@ -189,67 +178,94 @@ section {
 
 .about-text {
   flex: 1;
-  min-width: 260px;
 }
 
-h2 {
-  font-size: clamp(1.45rem, 3.5vw, 1.7rem);
-  margin-bottom: 12px;
+.about-text h2 {
+  margin-top: 0;
   color: #253340;
-  line-height: 1.3;
+  font-size: 1.65rem;
 }
 
-.pathways {
+/* HELP */
+
+.help-section {
+  margin-bottom: 50px;
+}
+
+.help-section > h2 {
+  font-size: 1.7rem;
+  color: #253340;
+}
+
+.help-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: 1fr 1fr;
   gap: 22px;
 }
 
-.pathway-card {
-  background: #ffffff;
+.help-card {
+  background: white;
+  padding: 25px;
   border-radius: 14px;
-  padding: 24px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
 }
 
-.pathway-card h3 {
+.help-card h3 {
   margin-top: 0;
   color: #3a8b96;
-  font-size: 1.3rem;
+  font-size: 1.35rem;
 }
 
-.pathway-card ul {
-  padding-left: 20px;
+.help-card ul {
+  padding-left: 22px;
 }
 
-.next-section {
-  background: #ffffff;
-  border-radius: 16px;
-  padding: 28px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+/* GWELLA NEXT */
+
+.gwella-next {
+  background: white;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  margin-bottom: 55px;
 }
 
-.next-section h2 {
+.gwella-next h2 {
   color: #3a8b96;
+  margin-top: 0;
 }
 
 .next-grid {
-  columns: 2;
-  column-gap: 40px;
-  padding-left: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.next-grid ul {
+  margin: 0;
+  padding-left: 22px;
+}
+
+/* TESTIMONIALS */
+
+.testimonials {
+  margin-bottom: 55px;
 }
 
 .testimonials h2 {
   text-align: center;
+  font-size: 1.7rem;
+  color: #253340;
+  margin-bottom: 22px;
 }
 
 .testimonial-box {
-  background: #ffffff;
-  border-radius: 14px;
-  padding: 22px 24px;
-  margin-bottom: 18px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  background: white;
   border-left: 4px solid #3a8b96;
+  border-radius: 14px;
+  padding: 20px 25px;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
 }
 
 .testimonial-box p {
@@ -258,195 +274,209 @@ h2 {
 }
 
 .testimonial-box span {
-  display: block;
   color: #556b78;
-  font-size: 0.92rem;
-  font-weight: 600;
+  font-weight: 650;
+}
+
+/* CONTACT */
+
+.contact-section h2 {
+  font-size: 1.7rem;
+  color: #253340;
 }
 
 .contact-box {
-  background: #ffffff;
+  background: white;
   border-radius: 14px;
   padding: 24px;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+  margin-bottom: 30px;
 }
 
 .contact-box ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 18px 0 0;
 }
 
 .contact-box li {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
-.contact-box a,
+.contact-box a {
+  color: #3a8b96;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* POLICIES */
+
+#policies {
+  text-align: center;
+  padding: 35px 20px 10px;
+}
+
+#policies h2 {
+  color: #253340;
+}
+
 #policies a {
   color: #3a8b96;
   text-decoration: none;
   font-weight: 700;
-  overflow-wrap: anywhere;
 }
 
-.contact-box a:hover,
-#policies a:hover {
-  text-decoration: underline;
-}
-
-#policies {
-  text-align: center;
-  padding: 16px 20px 0;
-}
+/* FOOTER */
 
 footer {
   text-align: center;
   font-size: 0.85rem;
-  padding: 22px;
+  padding: 25px;
   color: #7a8a9a;
 }
 
-@media (max-width: 700px) {
+/* TABLETS */
+
+@media (max-width: 900px) {
+
+  header img.logo {
+    max-width: 440px;
+  }
+
+  .about {
+    gap: 28px;
+  }
+
+  .mentor-photo-wrap {
+    flex-basis: 260px;
+  }
+}
+
+/* PHONES */
+
+@media (max-width: 600px) {
+
+  body {
+    font-size: 16px;
+  }
+
+  main {
+    padding: 0 15px 35px;
+  }
 
   header {
-    padding: 18px 12px 12px;
+    padding: 18px 15px 12px;
   }
 
   header img.logo {
-    width: min(78vw, 340px);
-    border-width: 2px;
+    width: 90%;
+    max-width: 320px;
+    height: auto;
     border-radius: 14px;
-    margin-bottom: 10px;
   }
 
   .tagline-banner {
     font-size: 0.92rem;
     line-height: 1.4;
-    padding: 0 6px;
+    padding: 0 8px;
   }
 
-  main {
-    padding: 0 14px 36px;
+  .intro {
+    padding: 25px 18px;
+    margin-bottom: 30px;
   }
 
-  section {
-    margin-bottom: 34px;
+  .intro h1 {
+    font-size: 1.65rem;
   }
 
-  .hero {
-    padding: 24px 18px;
-    border-radius: 14px;
-  }
-
-  .hero h1 {
-    font-size: 1.7rem;
-  }
-
-  .hero h2 {
+  .intro h2 {
     font-size: 1.35rem;
-    margin-top: 20px;
   }
 
-  .hero p {
-    font-size: 0.98rem;
+  .audience-buttons {
+    display: block;
   }
 
-  .button-row {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-  }
-
-  .button {
+  .audience-buttons a {
+    display: block;
     width: 100%;
-    text-align: center;
-    padding: 13px 16px;
+    margin: 10px 0;
+    padding: 12px 10px;
   }
 
-  .cta-strip {
-    padding: 18px 16px;
-  }
-
-  .problem-box {
-    padding: 20px 18px;
-    border-left-width: 4px;
-  }
-
-  .about {
-    justify-content: center;
-    text-align: center;
-    gap: 22px;
-  }
-
-  .mentor-photo-wrap {
-    flex-basis: 100%;
-  }
-
-  .about img.me {
-    max-width: 220px;
-    margin: 0 auto;
-  }
-
-  .about-text {
-    min-width: 0;
-  }
-
-  .pathways {
-    grid-template-columns: 1fr;
-    gap: 16px;
-  }
-
-  .pathway-card {
+  .stuck-box {
     padding: 20px;
+    margin-bottom: 35px;
   }
 
-  .next-section {
-    padding: 22px 18px;
-  }
-
-  .next-grid {
-    columns: 1;
-    padding-left: 20px;
-  }
-
-  .testimonial-box {
-    padding: 19px 18px;
-    margin-bottom: 14px;
-  }
-
-  .contact-box {
-    padding: 20px 18px;
-  }
-}
-
-@media (max-width: 420px) {
-
-  header img.logo {
-    width: min(82vw, 300px);
-  }
-
-  .tagline-banner {
-    font-size: 0.88rem;
-  }
-
-  .hero {
-    padding: 22px 16px;
-  }
-
-  .hero h1 {
-    font-size: 1.55rem;
-  }
-
-  .hero h2 {
-    font-size: 1.25rem;
-  }
-
-  h2 {
+  .stuck-box h2 {
     font-size: 1.4rem;
   }
 
-  body {
-    font-size: 0.97rem;
+  .about {
+    display: block;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .mentor-photo-wrap {
+    width: 100%;
+  }
+
+  .about img.me {
+    max-width: 230px;
+  }
+
+  .about-text {
+    text-align: left;
+    margin-top: 25px;
+  }
+
+  .about-text h2 {
+    text-align: center;
+    font-size: 1.45rem;
+  }
+
+  .help-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .help-section > h2 {
+    font-size: 1.5rem;
+  }
+
+  .help-card {
+    padding: 20px;
+  }
+
+  .next-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .gwella-next {
+    padding: 22px 20px;
+  }
+
+  .testimonials h2 {
+    font-size: 1.5rem;
+  }
+
+  .testimonial-box {
+    padding: 18px;
+  }
+
+  .contact-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-box {
+    padding: 18px;
+  }
+
+  .contact-box a {
+    overflow-wrap: anywhere;
   }
 }
 </style>
@@ -455,22 +485,16 @@ footer {
 <body>
 
 <header>
-
-  <img
-    src="gwella-logo.png"
-    alt="Gwella Mentoring logo"
-    class="logo"
-  />
+  <img src="gwella-logo.png" alt="Gwella Mentoring logo" class="logo">
 
   <p class="tagline-banner">
     Confidence, direction and practical next steps for young people
   </p>
-
 </header>
 
 <main>
 
-<section class="hero">
+<section class="intro">
 
   <h1>Gwella Mentoring</h1>
 
@@ -480,101 +504,46 @@ footer {
     <span class="highlight">“best”</span>.
   </p>
 
-  <p>
+  <p class="intro-lead">
     Gwella Mentoring helps young people move towards their
-    <strong>“better”</strong> — with clearer direction,
-    stronger confidence and practical next steps.
+    <strong>“better”</strong> — with clearer direction, stronger confidence
+    and practical next steps.
   </p>
 
   <h2>
     Is your teenager struggling with confidence, motivation or direction?
   </h2>
 
-  <p>
+  <p class="intro-description">
     Gwella provides experienced one-to-one mentoring for young people,
     giving them the space to talk, think and work out what comes next.
-    Together we build confidence, develop direction and turn thoughts
-    into practical, realistic next steps.
+    Together we build confidence, develop direction and turn thoughts into
+    practical, realistic next steps.
   </p>
 
-  <div class="button-row">
-
-    <a href="#parents" class="button button-primary">
-      I'm a parent
-    </a>
-
-    <a href="#professionals" class="button button-secondary">
-      I'm a school or professional
-    </a>
-
-  </div>
-
-  <div class="cta-strip">
-
-    <p>
-      <strong>Not sure whether mentoring is right?</strong><br>
-      Start with a free 20-minute introductory conversation.
-    </p>
-
-    <a href="#contact" class="button button-primary">
-      Arrange a conversation
-    </a>
-
+  <div class="audience-buttons">
+    <a href="#parents" class="parent-button">I'm a parent</a>
+    <a href="#schools" class="school-button">I'm a school or professional</a>
   </div>
 
 </section>
 
 
-<section class="problem-box">
+<section class="stuck-box">
 
   <h2>Does your teenager seem stuck?</h2>
 
   <p>
-    Sometimes young people don't need another person telling them what
-    to do. They need someone outside home and school who will listen,
-    ask the right questions, challenge their thinking and help them
-    work out their own next step.
+    Sometimes young people don't need another person telling them what to do.
+    They need someone outside home and school who will listen, ask the right
+    questions, challenge their thinking and help them work out their own next
+    step.
   </p>
 
   <p>
-    Gwella provides a calm, supportive space where young people can
-    talk things through, gain perspective and begin moving forward.
+    Gwella provides a calm, supportive space where young people can talk
+    things through, gain perspective and begin moving forward.
   </p>
-
-</section>
-
-
-<section class="testimonials">
-
-  <h2>What Parents Say</h2>
-
-  <div class="testimonial-box">
-    <p>
-      “Our son absolutely loved his mentoring sessions and could not wait
-      for Fridays. He came home buzzing with what he had learned and what
-      he wanted to work on next. That alone speaks volumes.”
-    </p>
-    <span>— Parent of Year 9 student</span>
-  </div>
-
-  <div class="testimonial-box">
-    <p>
-      “He says you are his favourite teacher he has ever had. Since
-      mentoring, his confidence at school has grown and his friendship
-      group has widened. He would absolutely love to continue the sessions.”
-    </p>
-    <span>— Parent of secondary student</span>
-  </div>
-
-  <div class="testimonial-box">
-    <p>
-      “Playing sport at national level can be very challenging for a
-      teenager. Since starting his mentoring he has become more resilient
-      and is now able to bounce back from defeat and focus on the positives
-      from his matches.”
-    </p>
-    <span>— Parent of national-level athlete</span>
-  </div>
 
 </section>
 
@@ -582,17 +551,14 @@ footer {
 <section class="about">
 
   <div class="mentor-photo-wrap">
-
     <img
       src="mentor-photo.png"
       alt="Phil Petchey, founder of Gwella Mentoring"
       class="me"
-    />
-
+    >
     <p class="mentor-label">
       Phil Petchey (BEd Hons) – Founder, Gwella Mentoring
     </p>
-
   </div>
 
   <div class="about-text">
@@ -600,24 +566,24 @@ footer {
     <h2>About Phil and Gwella</h2>
 
     <p>
-      Gwella Mentoring was founded by Phil Petchey following a career
-      spanning more than 30 years working with young people in education.
+      Gwella Mentoring was founded by Phil Petchey following a career spanning
+      more than 30 years working with young people in education.
     </p>
 
     <p>
       Over that time Phil has developed a range of practical tools and
-      approaches designed to help young people understand themselves,
-      build confidence, strengthen resilience and make positive decisions.
+      approaches designed to help young people understand themselves, build
+      confidence, strengthen resilience and make positive decisions.
     </p>
 
     <p>
-      Sessions are friendly, down-to-earth and focused on small,
-      manageable changes that build over time.
+      Sessions are friendly, down-to-earth and focused on small, manageable
+      changes that build over time.
     </p>
 
     <p>
-      Away from mentoring, Phil is a sailor, surfer, runner and
-      questionable ukulele player.
+      Away from mentoring, Phil is a sailor, surfer, runner and questionable
+      ukulele player.
     </p>
 
   </div>
@@ -625,19 +591,17 @@ footer {
 </section>
 
 
-<section>
+<section class="help-section">
 
   <h2>How Gwella Can Help</h2>
 
-  <div class="pathways">
+  <div class="help-grid">
 
-    <div class="pathway-card" id="parents">
+    <div class="help-card" id="parents">
 
       <h3>For Parents</h3>
 
-      <p>
-        Gwella can support young people who are:
-      </p>
+      <p>Gwella can support young people who are:</p>
 
       <ul>
         <li>struggling with confidence or self-belief</li>
@@ -652,21 +616,19 @@ footer {
     </div>
 
 
-    <div class="pathway-card" id="professionals">
+    <div class="help-card" id="schools">
 
       <h3>For Schools &amp; Professionals</h3>
 
       <p>
-        Gwella provides an additional supportive relationship for
-        young people who may benefit from focused one-to-one mentoring
-        alongside the support already available through school,
-        college or other services.
+        Gwella provides an additional supportive relationship for young people
+        who may benefit from focused one-to-one mentoring alongside the support
+        already available through school, college or other services.
       </p>
 
       <p>
-        Mentoring can focus on confidence, motivation, aspirations,
-        resilience, goal setting, decision-making and preparation for
-        future transitions.
+        Mentoring can focus on confidence, motivation, aspirations, resilience,
+        goal setting, decision-making and preparation for future transitions.
       </p>
 
     </div>
@@ -676,7 +638,7 @@ footer {
 </section>
 
 
-<section class="next-section">
+<section class="gwella-next">
 
   <h2>Gwella Next</h2>
 
@@ -687,46 +649,111 @@ footer {
   </p>
 
   <p>
-    Moving beyond school can bring exciting opportunities but also
-    uncertainty. Gwella Next provides a space for older teenagers and
-    young adults to think clearly about where they are heading and what
-    practical steps they can take.
+    Moving beyond school can bring exciting opportunities but also uncertainty.
+    Gwella Next provides a space for older teenagers and young adults to think
+    clearly about where they are heading and what practical steps they can take.
   </p>
 
-  <ul class="next-grid">
-    <li>Leaving school</li>
-    <li>College or university decisions</li>
-    <li>Careers</li>
-    <li>Apprenticeships</li>
-    <li>Finding motivation</li>
-    <li>Building confidence</li>
-    <li>First jobs</li>
-    <li>Changing direction</li>
-    <li>Setting goals</li>
-    <li>Life after school</li>
-  </ul>
+  <div class="next-grid">
+
+    <ul>
+      <li>Leaving school</li>
+      <li>College or university decisions</li>
+      <li>Careers</li>
+      <li>Apprenticeships</li>
+      <li>Finding motivation</li>
+    </ul>
+
+    <ul>
+      <li>Building confidence</li>
+      <li>First jobs</li>
+      <li>Changing direction</li>
+      <li>Setting goals</li>
+      <li>Life after school</li>
+    </ul>
+
+  </div>
 
 </section>
 
 
-<section id="contact">
+<section class="testimonials">
+
+  <h2>What Parents Say</h2>
+
+  <div class="testimonial-box">
+    <p>
+      “Our son absolutely loved his mentoring sessions and could not wait for
+      Fridays. He came home buzzing with what he had learned and what he wanted
+      to work on next. That alone speaks volumes.”
+    </p>
+    <span>— Parent of Year 9 student</span>
+  </div>
+
+  <div class="testimonial-box">
+    <p>
+      “The visualisation techniques had a real impact. He used them in his
+      karate training and competition and gained both confidence and success.
+      We truly believe the mentoring helped him believe in himself.”
+    </p>
+    <span>— Parent</span>
+  </div>
+
+  <div class="testimonial-box">
+    <p>
+      “We've seen real growth in confidence and positive mindset. He now thinks
+      more constructively and believes he can succeed — which is one of the
+      greatest gifts.”
+    </p>
+    <span>— Parent</span>
+  </div>
+
+  <div class="testimonial-box">
+    <p>
+      “She loved the challenge of the sessions. She now understands the
+      difference between positive self-talk and limiting beliefs and is
+      beginning to reflect more thoughtfully on her emotions and goals.”
+    </p>
+    <span>— Parent of Year 8 student</span>
+  </div>
+
+  <div class="testimonial-box">
+    <p>
+      “He says you are his favourite teacher he has ever had. Since mentoring,
+      his confidence at school has grown and his friendship group has widened.
+      He would absolutely love to continue the sessions.”
+    </p>
+    <span>— Parent of secondary student</span>
+  </div>
+
+  <div class="testimonial-box">
+    <p>
+      “Playing sport at national level can be very challenging for a teenager.
+      Since starting his mentoring he has become more resilient and is now able
+      to bounce back from defeat and focus on the positives from his matches.
+      That mindset is vital in competitive sport.”
+    </p>
+    <span>— Parent of national-level athlete</span>
+  </div>
+
+</section>
+
+
+<section class="contact-section">
 
   <h2>Start With an Informal Conversation</h2>
 
   <div class="contact-box">
 
     <p>
-      If you think Gwella might be right for a young person, start with
-      a free 20-minute introductory conversation.
+      If you think Gwella might be right for a young person, get in touch for
+      an informal, no-obligation conversation.
     </p>
 
     <ul>
-
       <li>
         📞 Phone:
-        <a href="tel:07761946529">
-          07761 946529
-        </a>
+        <a href="tel:07761946529">07761 946529</a>
       </li>
 
       <li>
@@ -746,7 +773,6 @@ footer {
           @gwellamentor
         </a>
       </li>
-
     </ul>
 
   </div>
@@ -781,8 +807,7 @@ footer {
 
 
 <script>
-document.getElementById("year").textContent =
-  new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear();
 </script>
 
 </body>
