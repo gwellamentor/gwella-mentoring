@@ -29,62 +29,62 @@ body {
 
 header {
   text-align: center;
-  padding: 36px 20px 22px;
+  padding: 24px 16px 16px;
 }
 
 header img.logo {
-  width: 95%;
-  max-width: 700px;
+  width: min(88vw, 520px);
   height: auto;
   display: block;
-  margin: 0 auto 18px;
+  margin: 0 auto 14px;
   border-radius: 18px;
   border: 3px solid #3a8b96;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.14);
 }
 
 .tagline-banner {
-  margin: 10px 0 0;
-  font-size: 1.05rem;
+  margin: 8px 0 0;
+  font-size: 1rem;
   font-weight: 600;
   color: #3a8b96;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.02em;
 }
 
 main {
   max-width: 960px;
   margin: 0 auto;
-  padding: 0 20px 50px;
+  padding: 0 20px 46px;
 }
 
 section {
-  margin-bottom: 52px;
+  margin-bottom: 46px;
 }
 
 .hero {
   text-align: center;
   background: #ffffff;
   border-radius: 18px;
-  padding: 38px 30px;
-  margin-top: 10px;
+  padding: 34px 28px;
+  margin-top: 8px;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
 .hero h1 {
-  font-size: 2.2rem;
-  margin: 0 0 12px;
+  font-size: clamp(1.8rem, 4vw, 2.2rem);
+  margin: 0 0 10px;
   color: #253340;
 }
 
 .hero .meaning {
   font-size: 1rem;
-  margin-bottom: 24px;
+  margin-bottom: 22px;
 }
 
 .hero h2 {
-  font-size: 1.65rem;
+  font-size: clamp(1.4rem, 4vw, 1.75rem);
   color: #3a8b96;
   margin: 24px 0 12px;
+  line-height: 1.3;
 }
 
 .hero p {
@@ -103,15 +103,16 @@ section {
   justify-content: center;
   flex-wrap: wrap;
   gap: 14px;
-  margin-top: 26px;
+  margin-top: 24px;
 }
 
 .button {
   display: inline-block;
-  padding: 12px 20px;
+  padding: 13px 22px;
   border-radius: 999px;
   text-decoration: none;
   font-weight: 700;
+  min-height: 48px;
   transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
@@ -129,6 +130,22 @@ section {
 .button:hover {
   transform: translateY(-1px);
   box-shadow: 0 5px 12px rgba(0,0,0,0.10);
+}
+
+.cta-strip {
+  text-align: center;
+  background: #eaf5f6;
+  border-radius: 14px;
+  padding: 22px 24px;
+  margin-top: 20px;
+}
+
+.cta-strip strong {
+  color: #253340;
+}
+
+.cta-strip p {
+  margin: 0 0 14px;
 }
 
 .problem-box {
@@ -176,9 +193,10 @@ section {
 }
 
 h2 {
-  font-size: 1.65rem;
+  font-size: clamp(1.45rem, 3.5vw, 1.7rem);
   margin-bottom: 12px;
   color: #253340;
+  line-height: 1.3;
 }
 
 .pathways {
@@ -260,7 +278,7 @@ h2 {
 }
 
 .contact-box li {
-  margin-bottom: 9px;
+  margin-bottom: 10px;
 }
 
 .contact-box a,
@@ -268,6 +286,7 @@ h2 {
   color: #3a8b96;
   text-decoration: none;
   font-weight: 700;
+  overflow-wrap: anywhere;
 }
 
 .contact-box a:hover,
@@ -277,7 +296,7 @@ h2 {
 
 #policies {
   text-align: center;
-  padding: 20px;
+  padding: 16px 20px 0;
 }
 
 footer {
@@ -290,41 +309,144 @@ footer {
 @media (max-width: 700px) {
 
   header {
-    padding-top: 24px;
+    padding: 18px 12px 12px;
+  }
+
+  header img.logo {
+    width: min(78vw, 340px);
+    border-width: 2px;
+    border-radius: 14px;
+    margin-bottom: 10px;
+  }
+
+  .tagline-banner {
+    font-size: 0.92rem;
+    line-height: 1.4;
+    padding: 0 6px;
   }
 
   main {
-    padding-left: 16px;
-    padding-right: 16px;
+    padding: 0 14px 36px;
+  }
+
+  section {
+    margin-bottom: 34px;
   }
 
   .hero {
-    padding: 28px 20px;
+    padding: 24px 18px;
+    border-radius: 14px;
   }
 
   .hero h1 {
-    font-size: 1.8rem;
+    font-size: 1.7rem;
   }
 
   .hero h2 {
-    font-size: 1.4rem;
+    font-size: 1.35rem;
+    margin-top: 20px;
+  }
+
+  .hero p {
+    font-size: 0.98rem;
+  }
+
+  .button-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+    padding: 13px 16px;
+  }
+
+  .cta-strip {
+    padding: 18px 16px;
+  }
+
+  .problem-box {
+    padding: 20px 18px;
+    border-left-width: 4px;
   }
 
   .about {
     justify-content: center;
     text-align: center;
+    gap: 22px;
+  }
+
+  .mentor-photo-wrap {
+    flex-basis: 100%;
   }
 
   .about img.me {
+    max-width: 220px;
     margin: 0 auto;
+  }
+
+  .about-text {
+    min-width: 0;
   }
 
   .pathways {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .pathway-card {
+    padding: 20px;
+  }
+
+  .next-section {
+    padding: 22px 18px;
   }
 
   .next-grid {
     columns: 1;
+    padding-left: 20px;
+  }
+
+  .testimonial-box {
+    padding: 19px 18px;
+    margin-bottom: 14px;
+  }
+
+  .contact-box {
+    padding: 20px 18px;
+  }
+}
+
+@media (max-width: 420px) {
+
+  header img.logo {
+    width: min(82vw, 300px);
+  }
+
+  .tagline-banner {
+    font-size: 0.88rem;
+  }
+
+  .hero {
+    padding: 22px 16px;
+  }
+
+  .hero h1 {
+    font-size: 1.55rem;
+  }
+
+  .hero h2 {
+    font-size: 1.25rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  body {
+    font-size: 0.97rem;
   }
 }
 </style>
@@ -333,6 +455,7 @@ footer {
 <body>
 
 <header>
+
   <img
     src="gwella-logo.png"
     alt="Gwella Mentoring logo"
@@ -342,6 +465,7 @@ footer {
   <p class="tagline-banner">
     Confidence, direction and practical next steps for young people
   </p>
+
 </header>
 
 <main>
@@ -374,6 +498,7 @@ footer {
   </p>
 
   <div class="button-row">
+
     <a href="#parents" class="button button-primary">
       I'm a parent
     </a>
@@ -381,6 +506,20 @@ footer {
     <a href="#professionals" class="button button-secondary">
       I'm a school or professional
     </a>
+
+  </div>
+
+  <div class="cta-strip">
+
+    <p>
+      <strong>Not sure whether mentoring is right?</strong><br>
+      Start with a free 20-minute introductory conversation.
+    </p>
+
+    <a href="#contact" class="button button-primary">
+      Arrange a conversation
+    </a>
+
   </div>
 
 </section>
@@ -401,6 +540,41 @@ footer {
     Gwella provides a calm, supportive space where young people can
     talk things through, gain perspective and begin moving forward.
   </p>
+
+</section>
+
+
+<section class="testimonials">
+
+  <h2>What Parents Say</h2>
+
+  <div class="testimonial-box">
+    <p>
+      “Our son absolutely loved his mentoring sessions and could not wait
+      for Fridays. He came home buzzing with what he had learned and what
+      he wanted to work on next. That alone speaks volumes.”
+    </p>
+    <span>— Parent of Year 9 student</span>
+  </div>
+
+  <div class="testimonial-box">
+    <p>
+      “He says you are his favourite teacher he has ever had. Since
+      mentoring, his confidence at school has grown and his friendship
+      group has widened. He would absolutely love to continue the sessions.”
+    </p>
+    <span>— Parent of secondary student</span>
+  </div>
+
+  <div class="testimonial-box">
+    <p>
+      “Playing sport at national level can be very challenging for a
+      teenager. Since starting his mentoring he has become more resilient
+      and is now able to bounce back from defeat and focus on the positives
+      from his matches.”
+    </p>
+    <span>— Parent of national-level athlete</span>
+  </div>
 
 </section>
 
@@ -480,7 +654,7 @@ footer {
 
     <div class="pathway-card" id="professionals">
 
-      <h3>For Schools & Professionals</h3>
+      <h3>For Schools &amp; Professionals</h3>
 
       <p>
         Gwella provides an additional supportive relationship for
@@ -535,77 +709,15 @@ footer {
 </section>
 
 
-<section class="testimonials">
-
-  <h2>What Parents Say</h2>
-
-  <div class="testimonial-box">
-    <p>
-      “Our son absolutely loved his mentoring sessions and could not wait
-      for Fridays. He came home buzzing with what he had learned and what
-      he wanted to work on next. That alone speaks volumes.”
-    </p>
-    <span>— Parent of Year 9 student</span>
-  </div>
-
-  <div class="testimonial-box">
-    <p>
-      “The visualisation techniques had a real impact. He used them in his
-      karate training and competition and gained both confidence and
-      success. We truly believe the mentoring helped him believe in himself.”
-    </p>
-    <span>— Parent</span>
-  </div>
-
-  <div class="testimonial-box">
-    <p>
-      “We've seen real growth in confidence and positive mindset. He now
-      thinks more constructively and believes he can succeed — which is
-      one of the greatest gifts.”
-    </p>
-    <span>— Parent</span>
-  </div>
-
-  <div class="testimonial-box">
-    <p>
-      “She loved the challenge of the sessions. She now understands the
-      difference between positive self-talk and limiting beliefs and is
-      beginning to reflect more thoughtfully on her emotions and goals.”
-    </p>
-    <span>— Parent of Year 8 student</span>
-  </div>
-
-  <div class="testimonial-box">
-    <p>
-      “He says you are his favourite teacher he has ever had. Since
-      mentoring, his confidence at school has grown and his friendship
-      group has widened. He would absolutely love to continue the sessions.”
-    </p>
-    <span>— Parent of secondary student</span>
-  </div>
-
-  <div class="testimonial-box">
-    <p>
-      “Playing sport at national level can be very challenging for a
-      teenager. Since starting his mentoring he has become more resilient
-      and is now able to bounce back from defeat and focus on the positives
-      from his matches. That mindset is vital in competitive sport.”
-    </p>
-    <span>— Parent of national-level athlete</span>
-  </div>
-
-</section>
-
-
-<section>
+<section id="contact">
 
   <h2>Start With an Informal Conversation</h2>
 
   <div class="contact-box">
 
     <p>
-      If you think Gwella might be right for a young person, get in touch
-      for an informal, no-obligation conversation.
+      If you think Gwella might be right for a young person, start with
+      a free 20-minute introductory conversation.
     </p>
 
     <ul>
@@ -654,7 +766,7 @@ footer {
 
   <p>
     <a href="policy-viewer.html?file=Gwella_Mentoring_GDPR_Policy.pdf">
-      🔐 GDPR & Data Protection Policy
+      🔐 GDPR &amp; Data Protection Policy
     </a>
   </p>
 
