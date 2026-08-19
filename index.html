@@ -4,17 +4,163 @@
 <meta charset="UTF-8" />
 <title>Gwella Mentoring</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<meta
+  name="description"
+  content="Gwella Mentoring provides experienced one-to-one mentoring for young people, helping build confidence, motivation, direction and practical next steps."
+/>
+
 <style>
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-margin: 0;
-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
-background: #f5fafb;
-color: #1f2933;
-line-height: 1.6;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  background: #f5fafb;
+  color: #1f2933;
+  line-height: 1.65;
+}
+
+header {
+  text-align: center;
+  padding: 36px 20px 22px;
+}
+
+header img.logo {
+  width: 95%;
+  max-width: 700px;
+  height: auto;
+  display: block;
+  margin: 0 auto 18px;
+  border-radius: 18px;
+  border: 3px solid #3a8b96;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+}
+
+.tagline-banner {
+  margin: 10px 0 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #3a8b96;
+  letter-spacing: 0.03em;
+}
+
+main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 20px 50px;
+}
+
+section {
+  margin-bottom: 52px;
+}
+
+.hero {
+  text-align: center;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 38px 30px;
+  margin-top: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.hero h1 {
+  font-size: 2.2rem;
+  margin: 0 0 12px;
+  color: #253340;
+}
+
+.hero .meaning {
+  font-size: 1rem;
+  margin-bottom: 24px;
+}
+
+.hero h2 {
+  font-size: 1.65rem;
+  color: #3a8b96;
+  margin: 24px 0 12px;
+}
+
+.hero p {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.highlight {
+  color: #3a8b96;
+  font-weight: 700;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 26px;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.button-primary {
+  background: #3a8b96;
+  color: #ffffff;
+}
+
+.button-secondary {
+  background: #ffffff;
+  color: #3a8b96;
+  border: 2px solid #3a8b96;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 12px rgba(0,0,0,0.10);
+}
+
+.problem-box {
+  background: #eaf5f6;
+  border-left: 5px solid #3a8b96;
+  padding: 26px 28px;
+  border-radius: 12px;
+}
+
+.problem-box h2 {
+  margin-top: 0;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: center;
 }
 
 .mentor-photo-wrap {
   text-align: center;
+  flex: 0 1 300px;
+}
+
+.about img.me {
+  max-width: 280px;
+  border-radius: 18px;
+  width: 100%;
+  height: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  border: 3px solid #3a8b96;
 }
 
 .mentor-label {
@@ -23,272 +169,481 @@ line-height: 1.6;
   color: #556b78;
   font-weight: 500;
 }
-  
-  .tagline-banner {
-  margin-top: 10px;
-  font-size: 1.1rem;
-  font-weight: 500;
-  color: #3a8b96;
-  letter-spacing: 0.03em;
-}
-  
-header {
-text-align: center;
-padding: 40px 20px 20px;
-}
-
-header img.logo {
-width:95%;
-max-width: 700px;
-height: 220px;
-object-fit: fill
-margin-bottom: 20px;
-border-radius:  18px;
-border: 3px solid #3a8b96;
-box-shadow: 0 6px 16px rgba(0,0,0,0.18)
-}
-
-main {
-max-width: 900px;
-margin: 0 auto;
-padding: 0 20px 40px;
-}
-
-.intro {
-text-align: center;
-margin-bottom: 40px;
-}
-
-.intro h1 {
-font-size: 2.1rem;
-letter-spacing: 0.12em;
-text-transform: uppercase;
-margin-bottom: 10px;
-}
-
-.intro p.tagline {
-font-size: 1.1rem;
-margin: 0;
-}
-
-.highlight {
-color: #3a8b96;
-font-weight: 600;
-}
-
-.about {
-display: flex;
-flex-wrap: wrap;
-gap: 30px;
-align-items: center;
-margin-bottom: 40px;
-}
-
-.about img.me {
-max-width: 280px;
-border-radius: 18px;
-width: 100%;
-height: auto;
-box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-border: 3px solid #3a8b96;
-}
 
 .about-text {
-flex: 1;
-min-width: 260px;
+  flex: 1;
+  min-width: 260px;
 }
 
 h2 {
-font-size: 1.6rem;
-margin-bottom: 10px;
-color: #253340;
+  font-size: 1.65rem;
+  margin-bottom: 12px;
+  color: #253340;
+}
+
+.pathways {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.pathway-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.pathway-card h3 {
+  margin-top: 0;
+  color: #3a8b96;
+  font-size: 1.3rem;
+}
+
+.pathway-card ul {
+  padding-left: 20px;
+}
+
+.next-section {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+}
+
+.next-section h2 {
+  color: #3a8b96;
+}
+
+.next-grid {
+  columns: 2;
+  column-gap: 40px;
+  padding-left: 20px;
+}
+
+.testimonials h2 {
+  text-align: center;
+}
+
+.testimonial-box {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 22px 24px;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  border-left: 4px solid #3a8b96;
+}
+
+.testimonial-box p {
+  margin-top: 0;
+  font-style: italic;
+}
+
+.testimonial-box span {
+  display: block;
+  color: #556b78;
+  font-size: 0.92rem;
+  font-weight: 600;
 }
 
 .contact-box {
-background: #ffffff;
-border-radius: 10px;
-padding: 20px 24px;
-box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
-margin-bottom: 20px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
 }
 
 .contact-box ul {
-list-style: none;
-padding: 0;
-margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .contact-box li {
-margin-bottom: 6px;
+  margin-bottom: 9px;
 }
 
-.contact-box a {
-color: #3a8b96;
-text-decoration: none;
-font-weight: 600;
+.contact-box a,
+#policies a {
+  color: #3a8b96;
+  text-decoration: none;
+  font-weight: 700;
 }
 
-.contact-box a:hover {
-text-decoration: underline;
+.contact-box a:hover,
+#policies a:hover {
+  text-decoration: underline;
+}
+
+#policies {
+  text-align: center;
+  padding: 20px;
 }
 
 footer {
-text-align: center;
-font-size: 0.85rem;
-padding: 20px;
-color: #7a8a9a;
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 22px;
+  color: #7a8a9a;
 }
 
 @media (max-width: 700px) {
-header {
-padding-top: 28px;
-}
-}
-@media (max-width: 700px) {
-.about {
-justify-content: center;
-text-align: center;
-}
 
-.about img.me {
-margin: 0 auto;
-}
+  header {
+    padding-top: 24px;
+  }
+
+  main {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero {
+    padding: 28px 20px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero h2 {
+    font-size: 1.4rem;
+  }
+
+  .about {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .about img.me {
+    margin: 0 auto;
+  }
+
+  .pathways {
+    grid-template-columns: 1fr;
+  }
+
+  .next-grid {
+    columns: 1;
+  }
 }
 </style>
 </head>
+
 <body>
 
 <header>
-  <!-- Gwella logo -->
-  <img src="gwella-logo.png" alt="Gwella Mentoring logo" class="logo" />
+  <img
+    src="gwella-logo.png"
+    alt="Gwella Mentoring logo"
+    class="logo"
+  />
 
   <p class="tagline-banner">
-    Confidence, focus and mindset mentoring for young people
+    Confidence, direction and practical next steps for young people
   </p>
 </header>
 
 <main>
-<section class="intro">
-<h1>Gwella Mentoring</h1>
-<p class="tagline">
-<strong>Gwella</strong> is Cornish for
-<span class="highlight">“better”</span> or
-<span class="highlight">“best”</span>.
-</p>
-<p>
-Gwella Mentoring is about helping young people move towards their “better” –
-with clearer direction, stronger confidence and practical next steps. This is achieved through using a number of exceptional tools, developed by Phil Petchey over a career spanning 30+ years. Phil is a sailor, surfer, runner and questionable ukelele player, who has devoted himself to teaching and personal development. 
-</p>
+
+<section class="hero">
+
+  <h1>Gwella Mentoring</h1>
+
+  <p class="meaning">
+    <strong>Gwella</strong> is Cornish for
+    <span class="highlight">“better”</span> or
+    <span class="highlight">“best”</span>.
+  </p>
+
+  <p>
+    Gwella Mentoring helps young people move towards their
+    <strong>“better”</strong> — with clearer direction,
+    stronger confidence and practical next steps.
+  </p>
+
+  <h2>
+    Is your teenager struggling with confidence, motivation or direction?
+  </h2>
+
+  <p>
+    Gwella provides experienced one-to-one mentoring for young people,
+    giving them the space to talk, think and work out what comes next.
+    Together we build confidence, develop direction and turn thoughts
+    into practical, realistic next steps.
+  </p>
+
+  <div class="button-row">
+    <a href="#parents" class="button button-primary">
+      I'm a parent
+    </a>
+
+    <a href="#professionals" class="button button-secondary">
+      I'm a school or professional
+    </a>
+  </div>
+
+</section>
+
+
+<section class="problem-box">
+
+  <h2>Does your teenager seem stuck?</h2>
+
+  <p>
+    Sometimes young people don't need another person telling them what
+    to do. They need someone outside home and school who will listen,
+    ask the right questions, challenge their thinking and help them
+    work out their own next step.
+  </p>
+
+  <p>
+    Gwella provides a calm, supportive space where young people can
+    talk things through, gain perspective and begin moving forward.
+  </p>
+
 </section>
 
 
 <section class="about">
-<!-- Your photo -->
-<div class="mentor-photo-wrap">
-  <img src="mentor-photo.png"
-       alt="Mentor in Marrakesh"
-       class="me" />
-  <p class="mentor-label">Phil Petchey (BEd Hons) – Founder, Gwella Mentoring</p>
-</div>
 
-<div class="about-text">
-<h2>About Gwella Mentoring</h2>
-<p>
-Gwella mentoring offers a calm, supportive space to talk things through,
-gain perspective and plan realistic actions. Whether it is at school,
-home, life transitions or just feeling stuck, you don’t have to navigate
-it alone.
-</p>
-<p>
-Sessions are friendly, down-to-earth and focused on small, manageable
-changes that add up over time.
-</p>
-</div>
+  <div class="mentor-photo-wrap">
+
+    <img
+      src="mentor-photo.png"
+      alt="Phil Petchey, founder of Gwella Mentoring"
+      class="me"
+    />
+
+    <p class="mentor-label">
+      Phil Petchey (BEd Hons) – Founder, Gwella Mentoring
+    </p>
+
+  </div>
+
+  <div class="about-text">
+
+    <h2>About Phil and Gwella</h2>
+
+    <p>
+      Gwella Mentoring was founded by Phil Petchey following a career
+      spanning more than 30 years working with young people in education.
+    </p>
+
+    <p>
+      Over that time Phil has developed a range of practical tools and
+      approaches designed to help young people understand themselves,
+      build confidence, strengthen resilience and make positive decisions.
+    </p>
+
+    <p>
+      Sessions are friendly, down-to-earth and focused on small,
+      manageable changes that build over time.
+    </p>
+
+    <p>
+      Away from mentoring, Phil is a sailor, surfer, runner and
+      questionable ukulele player.
+    </p>
+
+  </div>
+
 </section>
+
+
+<section>
+
+  <h2>How Gwella Can Help</h2>
+
+  <div class="pathways">
+
+    <div class="pathway-card" id="parents">
+
+      <h3>For Parents</h3>
+
+      <p>
+        Gwella can support young people who are:
+      </p>
+
+      <ul>
+        <li>struggling with confidence or self-belief</li>
+        <li>lacking motivation</li>
+        <li>feeling stuck or unsure what to do next</li>
+        <li>finding school or life overwhelming</li>
+        <li>capable but not fulfilling their potential</li>
+        <li>trying to build resilience in sport or everyday life</li>
+        <li>facing important choices or transitions</li>
+      </ul>
+
+    </div>
+
+
+    <div class="pathway-card" id="professionals">
+
+      <h3>For Schools & Professionals</h3>
+
+      <p>
+        Gwella provides an additional supportive relationship for
+        young people who may benefit from focused one-to-one mentoring
+        alongside the support already available through school,
+        college or other services.
+      </p>
+
+      <p>
+        Mentoring can focus on confidence, motivation, aspirations,
+        resilience, goal setting, decision-making and preparation for
+        future transitions.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="next-section">
+
+  <h2>Gwella Next</h2>
+
+  <p>
+    <strong>
+      For young people aged 16–20 who are figuring out what's next.
+    </strong>
+  </p>
+
+  <p>
+    Moving beyond school can bring exciting opportunities but also
+    uncertainty. Gwella Next provides a space for older teenagers and
+    young adults to think clearly about where they are heading and what
+    practical steps they can take.
+  </p>
+
+  <ul class="next-grid">
+    <li>Leaving school</li>
+    <li>College or university decisions</li>
+    <li>Careers</li>
+    <li>Apprenticeships</li>
+    <li>Finding motivation</li>
+    <li>Building confidence</li>
+    <li>First jobs</li>
+    <li>Changing direction</li>
+    <li>Setting goals</li>
+    <li>Life after school</li>
+  </ul>
+
+</section>
+
+
 <section class="testimonials">
+
   <h2>What Parents Say</h2>
 
   <div class="testimonial-box">
     <p>
-      “Our son absolutely loved his mentoring sessions and could not wait for Fridays.
-      He came home buzzing with what he had learned and what he wanted to work on next.
-      That alone speaks volumes.”
+      “Our son absolutely loved his mentoring sessions and could not wait
+      for Fridays. He came home buzzing with what he had learned and what
+      he wanted to work on next. That alone speaks volumes.”
     </p>
     <span>— Parent of Year 9 student</span>
   </div>
 
   <div class="testimonial-box">
     <p>
-      “The visualisation techniques had a real impact. He used them in his karate training
-      and competition and gained both confidence and success. We truly believe the mentoring
-      helped him believe in himself.”
+      “The visualisation techniques had a real impact. He used them in his
+      karate training and competition and gained both confidence and
+      success. We truly believe the mentoring helped him believe in himself.”
     </p>
     <span>— Parent</span>
   </div>
 
   <div class="testimonial-box">
     <p>
-      “We’ve seen real growth in confidence and positive mindset. He now thinks more
-      constructively and believes he can succeed — which is one of the greatest gifts.”
+      “We've seen real growth in confidence and positive mindset. He now
+      thinks more constructively and believes he can succeed — which is
+      one of the greatest gifts.”
     </p>
     <span>— Parent</span>
   </div>
 
   <div class="testimonial-box">
     <p>
-      “She loved the challenge of the sessions. She now understands the difference
-      between positive self-talk and limiting beliefs and is beginning to reflect more
-      thoughtfully on her emotions and goals.”
+      “She loved the challenge of the sessions. She now understands the
+      difference between positive self-talk and limiting beliefs and is
+      beginning to reflect more thoughtfully on her emotions and goals.”
     </p>
     <span>— Parent of Year 8 student</span>
   </div>
 
   <div class="testimonial-box">
     <p>
-      “He says you are his favourite teacher he has ever had. Since mentoring,
-      his confidence at school has grown and his friendship group has widened.
-      He would absolutely love to continue the sessions.”
+      “He says you are his favourite teacher he has ever had. Since
+      mentoring, his confidence at school has grown and his friendship
+      group has widened. He would absolutely love to continue the sessions.”
     </p>
     <span>— Parent of secondary student</span>
   </div>
 
   <div class="testimonial-box">
     <p>
-      “Playing sport at national level can be very challenging for a teenager.
-      Since starting his mentoring he has become more resilient and is now able
-      to bounce back from defeat and focus on the positives from his matches.
-      That mindset is vital in competitive sport.”
+      “Playing sport at national level can be very challenging for a
+      teenager. Since starting his mentoring he has become more resilient
+      and is now able to bounce back from defeat and focus on the positives
+      from his matches. That mindset is vital in competitive sport.”
     </p>
     <span>— Parent of national-level athlete</span>
   </div>
+
 </section>
 
+
 <section>
-  <h2>Contact</h2>
+
+  <h2>Start With an Informal Conversation</h2>
+
   <div class="contact-box">
+
+    <p>
+      If you think Gwella might be right for a young person, get in touch
+      for an informal, no-obligation conversation.
+    </p>
+
     <ul>
+
       <li>
         📞 Phone:
-        <a href="tel:07761946529">07761 946529</a>
+        <a href="tel:07761946529">
+          07761 946529
+        </a>
       </li>
+
       <li>
         📧 Email:
-        <a href="mailto:gwellamentor@gmail.com">gwellamentor@gmail.com</a>
+        <a href="mailto:gwellamentor@gmail.com">
+          gwellamentor@gmail.com
+        </a>
       </li>
+
       <li>
         📸 Instagram:
-        <a href="https://www.instagram.com/gwellamentor" target="_blank">
+        <a
+          href="https://www.instagram.com/gwellamentor"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           @gwellamentor
         </a>
       </li>
+
     </ul>
-    <p style="margin-top: 10px;">
-      Get in touch to ask a question or arrange an informal, no-obligation chat.
-    </p>
+
   </div>
+
 </section>
 
-<section id="policies" style="text-align:center; padding:40px 20px;">
+
+<section id="policies">
+
   <h2>Our Policies</h2>
 
   <p>
@@ -302,15 +657,20 @@ changes that add up over time.
       🔐 GDPR & Data Protection Policy
     </a>
   </p>
+
 </section>
-  
+
+</main>
+
+
 <footer>
-© <span id="year"></span> Gwella Mentoring
+  © <span id="year"></span> Gwella Mentoring
 </footer>
 
+
 <script>
-// Automatically show the current year in the footer
-document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("year").textContent =
+  new Date().getFullYear();
 </script>
 
 </body>
